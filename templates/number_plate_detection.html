@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block content %}
+<div style="width: 600px; margin-left: 20px; display: block;" class = 'content-section'>
+    <form method = "post" action="" enctype="multipart/form-data">
+        {{form.hidden_tag()}}
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Number Plate Detection</legend>
+
+            <div class="form-group">
+                {{form.image.label()}}
+                {{form.image(class = "form-control-file")}}
+                {% if form.image.errors %}
+                    {% for error in form.image.errors%}
+                        <span class="text-danger">{{error}}</span></br>
+                    {% endfor %}
+                {% endif %}  
+            </div>
+
+        </fieldset>
+        <div class = "form-group">
+            {{form.upload(class = "btn btn-dark")}}
+        </div>
+    </form>
+</div>
+{% endblock content %}

@@ -1,0 +1,11 @@
+#original_image{
+    height: 500px;
+    width: 500px;
+    margin: 2px;
+}
+
+#detected_image{
+    height: 500px;
+    width: 500px;
+    margin: 2px;
+}
